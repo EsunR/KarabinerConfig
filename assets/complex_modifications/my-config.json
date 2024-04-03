@@ -2,7 +2,7 @@
   "title": "My Config",
   "rules": [
     {
-      "description": "交换 left_command+del 与 left_option+del",
+      "description": "windows 风格删除单个词与删除一整行 (交换 left_command+del 与 left_option+del)",
       "manipulators": [
         {
           "type": "basic",
@@ -48,7 +48,53 @@
       ]
     },
     {
-      "description": "交换 left_command+left_arrow 与 left_option+left_arrow",
+      "description": "windows 风格切换输入法 (交换 left_command+spacebar 与 left_control+spacebar)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "windows 风格光标移动至单词前与移动至行前 (交换 left_command+left_arrow 与 left_option+left_arrow)",
       "manipulators": [
         {
           "type": "basic",
@@ -97,7 +143,7 @@
       ]
     },
     {
-      "description": "交换 left_command+right_arrow 与 left_option+right_arrow",
+      "description": "windows 风格光标移动至单词尾与移动至行尾 (交换 left_command+right_arrow 与 left_option+right_arrow)",
       "manipulators": [
         {
           "type": "basic",
@@ -146,7 +192,7 @@
       ]
     },
     {
-      "description": "交换 left_command+delete_forward 与 left_option+delete_forward",
+      "description": "windows 风格向前删除单个词与删除一整行 (交换 left_command+delete_forward 与 left_option+delete_forward)",
       "manipulators": [
         {
           "type": "basic",
@@ -195,7 +241,7 @@
       ]
     },
     {
-      "description": "映射 left_option+tab 到 left_option+tab (切换任务)",
+      "description": "windows 风格切换任务 (映射 left_option+tab 到 left_command+tab)",
       "manipulators": [
         {
           "type": "basic",
@@ -222,7 +268,7 @@
       ]
     },
     {
-      "description": "映射 left_control+a 与 left_command+button5  到 left_control+left_arrow (左切换屏幕)",
+      "description": "使用鼠标侧键左切换屏幕 (映射 left_control+a 与 left_command+button5  到 left_control+left_arrow)",
       "manipulators": [
         {
           "type": "basic",
@@ -271,7 +317,7 @@
       ]
     },
     {
-      "description": "映射 left_control+d 与 left_command+button4 到 left_control+right_arrow (右切换屏幕)",
+      "description": "使用鼠标侧键右切换屏幕 (映射 left_control+d 与 left_command+button4 到 left_control+right_arrow)",
       "manipulators": [
         {
           "type": "basic",
@@ -320,7 +366,7 @@
       ]
     },
     {
-      "description": "映射 left_control+tab、left_control+w、button3 到 left_control+top_arrow (显示调度中心)",
+      "description": "鼠标、键盘快捷显示调度中心 (映射 left_control+tab、left_control+w、button3 到 left_control+top_arrow)",
       "manipulators": [
         {
           "type": "basic",
@@ -388,7 +434,7 @@
       ]
     },
     {
-      "description": "映射 left_control+s 到 left_control+down_arrow (下切换屏幕)",
+      "description": "键盘下切换屏幕 (映射 left_control+s 到 left_control+down_arrow)",
       "manipulators": [
         {
           "type": "basic",
@@ -415,7 +461,7 @@
       ]
     },
     {
-      "description": "映射 home 到 left_command+left_arrow (光标移动至文本行开始)",
+      "description": "Home 键光标移动至文本行开始 (映射 home 到 left_command+left_arrow)",
       "manipulators": [
         {
           "type": "basic",
@@ -439,7 +485,7 @@
       ]
     },
     {
-      "description": "映射 end 到 right_command+left_arrow (光标移动至文本行末尾)",
+      "description": "Home 键光标移动至文本行末尾 (映射 end 到 right_command+left_arrow)",
       "manipulators": [
         {
           "type": "basic",
